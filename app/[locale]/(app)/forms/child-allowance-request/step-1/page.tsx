@@ -10,11 +10,8 @@ export default function Step1() {
   const params = useParams();
   const locale = params.locale as string;
 
-  
-
   // assuming WizardProvider exposes these (like your other examples)
   const { draft, update, extras, setExtras, saveNow, saveStatus } = useWizard();
-
 
     // ✅ store which step we are on (so drafts resume correctly)
     useEffect(() => {

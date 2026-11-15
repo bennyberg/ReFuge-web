@@ -316,7 +316,6 @@ export default function Step4() {
       { fontBytes, autoDetectRtl: true, defaultRtlAlignRight: true },
     );
 
-    // const savedInstanceId = await saveDraft(instanceId ?? undefined);
     await uploadPdf(outBytes, pdfTitle);
   }
 
@@ -384,7 +383,6 @@ export default function Step4() {
           cursor: (extras as any)?.applicantSignatureDataUrl
             ? "pointer"
             : "default",
-          // textDecoration: "underline",
           // opacity: (extras as any)?.applicantSignatureDataUrl ? 1 : 0.5,
           userSelect: "none",
         }}
@@ -406,7 +404,6 @@ export default function Step4() {
         </button>
         <button
           className={styles.secondaryButton}
-          // disabled={saveStatus === "saving"}
           onClick={async () => {
             const id = await saveNow();
             if (id) router.push(`/${locale}/forms/child-registration-request`);

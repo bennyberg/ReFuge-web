@@ -50,10 +50,6 @@ function openMailto(to: string, subject: string, body: string) {
 }
 
 function downloadPdf(filename: string, pdfBytes: Uint8Array) {
-  //   const blob = new Blob([pdfBytes], { type: "application/pdf" });
-  //   const safeBytes = new Uint8Array(pdfBytes); // copies
-  //   const blob = new Blob([safeBytes], { type: "application/pdf" });
-  //   const url = URL.createObjectURL(blob);
 
   const url = bytesToBlobUrl(pdfBytes);
 

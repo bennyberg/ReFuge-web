@@ -396,11 +396,6 @@ export function deriveExtrasFromIntake(
  * just moved into a reusable function.
  */
 
-// export function intakeToPdfFields(
-//   draft: IntakeRecord,
-//   extras?: Partial<ExtrasState>,
-// ): Record<string, string> {
-
 export function intakeToPdfFields(
   draft: IntakeRecord,
   extras?: Partial<ExtrasState>,
@@ -416,7 +411,6 @@ export function intakeToPdfFields(
   const t1 = tripAt(extras, 0);
   const t2 = tripAt(extras, 1);
   const t3 = tripAt(extras, 2);
-
 
     // --- Checkbox helpers ---
   const cb = (on: boolean) => (on ? "1" : ""); // adjust if your renderer expects "true"/"X"
@@ -479,8 +473,6 @@ export function intakeToPdfFields(
   const niPaymentsStatus =
     payStatusRaw === "paid" ? "paid" : payStatusRaw === "notpaid" || payStatusRaw === "not_paid" ? "notPaid" : "";
 
-
-
   return {
 
         // ===============================
@@ -532,8 +524,6 @@ export function intakeToPdfFields(
     // payments status
     "israeliApplicant.niPaymentsStatus.paid": cb(niPaymentsStatus === "paid"),
     "israeliApplicant.niPaymentsStatus.notPaid": cb(niPaymentsStatus === "notPaid"),
-
-
 
     // ===== Page 0 =====
     firstNameHebrew: s1.firstName.he ?? "",

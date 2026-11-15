@@ -132,7 +132,6 @@ export const fieldMap: FieldMap = {
     x: 65.2,
     y: 320.23,
     direction: "ltr",
-    // align: "right",
     width: 50,
 
     fontSize: 6,
@@ -258,7 +257,6 @@ export const fieldMap: FieldMap = {
     x: 70.2,
     y: 506.23,
     direction: "ltr",
-    // align: "right",
     width: 50,
     fontSize: 6,
     clearBackground: false,
@@ -273,15 +271,6 @@ export const fieldMap: FieldMap = {
     fontSize: 8,
     clearBackground: false,
   },
-
-  //   "allowanceRequester.email": {
-  //   pageIndex: 1,
-  //   x: 86.2,
-  //   y: 506.23,
-  //   direction: "ltr",
-  //   fontSize: 8,
-  //   clearBackground: false,
-  // },
 
   "bankAccount.owner1": {
     pageIndex: 1,

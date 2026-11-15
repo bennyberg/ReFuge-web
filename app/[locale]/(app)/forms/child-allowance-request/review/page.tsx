@@ -128,8 +128,6 @@ export default function Review() {
   }
 
   return (
-    // <main className={styles.pageContainer}>
-    // <div className={styles.page}>
     <main className={styles.page}>
       <div className={styles.imageContainer}>
         <img className="reviewImage" src="/images/pink-envelope.svg"></img>

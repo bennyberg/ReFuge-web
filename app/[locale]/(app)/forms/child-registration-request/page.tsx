@@ -6,23 +6,6 @@ import { createClient } from "@/lib/supabase/client";
 import styles from "./page.module.css";
 import Link from "next/link";
 
-// type GeneratedPdfRow = {
-//   id: string;
-//   bucket: string;
-//   path: string;
-//   created_at: string;
-// };
-
-// type GeneratedPdfRow = {
-//   id: string;
-//   bucket: string;
-//   path: string;
-//   created_at: string;
-//   form_instance_id: string | null;
-//   form_instance: { title: string | null } | null;
-//   // form_instances: { title: string | null }[]; // matches your current result
-// };
-
 type GeneratedPdfRow = {
   id: string;
   bucket: string;
@@ -121,26 +104,6 @@ export default function ChildRegistrationHomePage() {
         return;
       }
 
-      //     const { data, error } = await supabase
-      //       .from("generated_pdfs")
-      //       .select(
-      //         `
-      //   id,
-      //   bucket,
-      //   path,
-      //   created_at,
-      //   form_instance_id,
-      //   form_instance:form_instances ( title )
-      // `,
-      //       )
-      //       .eq("user_id", userRes.user.id)
-      //       .order("created_at", { ascending: false });
-      //     if (error) {
-      //       setPdfErr(error.message);
-      //       setPdfLoading(false);
-      //       return;
-      //     }
-
       const { data, error } = await supabase
         .from("generated_pdfs")
         .select("id, bucket, path, created_at, form_instance_id, pdf_title")
@@ -148,7 +111,6 @@ export default function ChildRegistrationHomePage() {
         .order("created_at", { ascending: false });
 
       setPdfRows((data ?? []) as GeneratedPdfRow[]);
-      // setPdfRows(data ?? []);
       setPdfLoading(false);
     })();
   }, []);

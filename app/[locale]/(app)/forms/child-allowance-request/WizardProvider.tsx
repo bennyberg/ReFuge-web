@@ -11,8 +11,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import emptyIntakeTemplate from "@/public/demo/intake.empty.json";
 import { createClient } from "@/lib/supabase/client";
 
-// export type IntakeRecord = typeof emptyIntakeTemplate;
-
 export type IntakeRecord = {
   intake: {
     step1: {
@@ -142,7 +140,6 @@ export type IntakeRecord = {
     currentStep: number;
   };
 };
-
 
 export type ExtrasState = {
   formDate: string;

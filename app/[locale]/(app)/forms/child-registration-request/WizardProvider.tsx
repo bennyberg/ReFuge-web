@@ -11,10 +11,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import demo from "@/public/demo/intake.empty.json";
 import { createClient } from "@/lib/supabase/client"; // <-- your browser supabase client
 
-// export type IntakeRecord = typeof demo;
-
-
-
 export type IntakeRecord = {
   intake: {
     step1: {
@@ -156,7 +152,6 @@ export type IntakeRecord = {
   };
 };
 
-
 export type ExtrasState = {
   formDate: string;
   poBox: string;
@@ -209,7 +204,6 @@ export function WizardProvider({ children }: { children: React.ReactNode }) {
   const [saveStatus, setSaveStatus] = useState<Ctx["saveStatus"]>("idle");
   const [saveError, setSaveError] = useState<string | undefined>(undefined);
   
-
   function normalizeTitle(value: unknown) {
     if (typeof value !== "string") return "";
     const trimmed = value.trim();
@@ -306,7 +300,6 @@ export function WizardProvider({ children }: { children: React.ReactNode }) {
       return null;
     }
   }
-
 
   useEffect(() => {
     let cancelled = false;
@@ -412,19 +405,6 @@ export function WizardProvider({ children }: { children: React.ReactNode }) {
       return next;
     });
   }
-
-  // const ctx = useMemo(
-  //   () => ({
-  //     draft,
-  //     setDraft,
-  //     extras,
-  //     setExtras,
-  //     update,
-  //     instanceId,
-  //     isHydrated,
-  //   }),
-  //   [draft, extras, instanceId, isHydrated],
-  // );
 
   const ctx = useMemo(
     () => ({

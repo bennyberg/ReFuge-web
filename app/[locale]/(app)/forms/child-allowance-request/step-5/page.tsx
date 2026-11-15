@@ -350,7 +350,6 @@ export default function Step5() {
           cursor: (extras as any)?.applicantSignatureDataUrl
             ? "pointer"
             : "default",
-          // textDecoration: "underline",
           // opacity: (extras as any)?.applicantSignatureDataUrl ? 1 : 0.5,
           userSelect: "none",
         }}

@@ -59,14 +59,12 @@ export default function Step2() {
         <button
           type="button"
           className={styles.primaryButton}
-          // onClick={() => router.push("./step-3")}
           onClick={() => router.push(nextUrl)}
         >
           {nextLabel}
         </button>
         <button
           className={styles.secondaryButton}
-          // disabled={saveStatus === "saving"}
           onClick={async () => {
             const id = await saveNow();
             if (id) router.push(`/${locale}/forms/child-registration-request`);

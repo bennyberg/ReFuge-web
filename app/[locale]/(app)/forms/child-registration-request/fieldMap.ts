@@ -221,7 +221,6 @@ export const fieldMap: FieldMap = {
     pageIndex: 0,
     x: 30,
     y: 115,
-    // height: 500,
     width: 100, // bigger
     height: 30, // bigger
     kind: "signature",

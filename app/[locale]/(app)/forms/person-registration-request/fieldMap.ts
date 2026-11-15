@@ -58,14 +58,6 @@ export const fieldMap: FieldMap = {
     fontSize: 8,
     clearBackground: false,
   },
-  // prevLastNameHebrew: {
-  //   pageIndex: 0,
-  //   x: 190.1,
-  //   y: 585.42,
-  //   direction: "ltr",
-  //   fontSize: 8,
-  //   clearBackground: false,
-  // },
   prevLastNameEnglish: {
     pageIndex: 0,
     x: 275.1,
@@ -578,8 +570,6 @@ export const fieldMap: FieldMap = {
 "israeliApplicant.visaType.B3": { pageIndex: 0, x: 351, y: 451, kind: "checkbox", boxSize: 5, strokeWidth: 1.2 },
 "israeliApplicant.visaType.B4": { pageIndex: 0, x: 351, y: 441, kind: "checkbox", boxSize: 5, strokeWidth: 1.2 },
 
-
-
 // marital status
 "israeliApplicant.maritalStatus.single": { pageIndex: 0, x: 490, y: 106, kind: "checkbox", boxSize: 5, strokeWidth: 1.2 },
 "israeliApplicant.maritalStatus.married": { pageIndex: 0, x: 0, y: 92, kind: "checkbox", boxSize: 5, strokeWidth: 1.2 },
@@ -604,11 +594,9 @@ export const fieldMap: FieldMap = {
 "israeliApplicant.niPaidAs.unemployedWithIncome": { pageIndex: 1, x: 520 , y: 480, kind: "checkbox", boxSize: 5, strokeWidth: 1.2 },
 "israeliApplicant.niPaidAs.unemployedNoIncome": { pageIndex: 1, x: 520, y: 450, kind: "checkbox", boxSize: 5, strokeWidth: 1.2 },
 
-
 // payments status
 "israeliApplicant.niPaymentsStatus.paid": { pageIndex: 1, x: 520, y: 410, kind: "checkbox", boxSize: 5, strokeWidth: 1.2 },
 "israeliApplicant.niPaymentsStatus.notPaid": { pageIndex: 0, x: 520, y: 370, kind: "checkbox", boxSize: 5, strokeWidth: 1.2 },
-
 
   applicantSignature: {
     pageIndex: 1,
@@ -629,4 +617,4 @@ export const fieldMap: FieldMap = {
     clearBackground: false,
   },
 };
-
+
